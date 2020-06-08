@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="home.css"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <title><%= title %></title>
+    </head>
+    <body>
+        <div>
+            <a href="/">Home</a> |  
+            <a href="/users/list'">All Users List</a>
+        </div>    
+        <h1><%= title %></h1>
+        <% if (messages.error) { %>
+    <p style="color:red"><%- messages.error %></p>
+<% } %>
+ 
+<% if (messages.success) { %>
+    <p style="color:green"><%- messages.success %></p>
+<% } %>
+ 
+<form action="/users/edit/<%= id %>" method="post" name="form1">
+    <table width="25%" border="0">
+        <tr> 
+            <td>First Name</td>
+            <td><input type="text" name="fname" id="name" value="<%= fname %>" /></td>
+        </tr>
+        <tr> 
+            <td>Last Name</td>
+            <td><input type="text" name="lname" value="<%= lname %>" /></td>
+        </tr>
+        <tr> 
+            <td>Contact</td>
+            <td><input type="text" name="num" value="<%= num %>" /></td>
+        </tr>
+        <tr> 
+            <td>Date Of Birth</td>
+            <td><input type="text" name="dob" value="<%= dob %>" /></td>
+        </tr>
+        <tr> 
+            <td>Address</td>
+            <td><input type="text" name="add" value="<%= add %>" /></td>
+        </tr>
+        <tr> 
+            <td>Emergency Number</td>
+            <td><input type="text" name="enum" value="<%= enum %>" /></td>
+        </tr>
+        <tr> 
+            <td></td>
+            <td><input type="submit" name="Submit" value="Edit" /></td>
+        </tr>
+    </table>
+    <input type="hidden" name="_method" value="PUT" />
+</form>
+         </body>
+</html>  

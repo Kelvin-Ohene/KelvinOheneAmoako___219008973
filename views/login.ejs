@@ -1,0 +1,37 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="home.css"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+<body>
+   <form action="/auth/login" method="post">
+   <label for="login" class="col-sm-2 col-form-label"><h1>Login</h1></label>
+  <div class="form-group row-auto">
+    <label for="inputname" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-3">
+      <input type="text" name="username" class="form-control" id="inputname3" name="name">
+    </div>
+  </div>
+  <div class="form-group row-auto">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-3">
+      <input type="password" name="password" class="form-control" id="inputPassword" name="password">
+    </div>
+  </div>
+  
+  <div class="form-group row-auto">
+    <div class="col-sm-3">
+      <button class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+<a href="/home">Return to home</a>
+</form> 
+</body>
